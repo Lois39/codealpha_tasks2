@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="gallery-title">Ai Art Image Gallery</h1>
+    
+    <div class="gallery">
+        <div class="image" onclick="openLightbox(0)">
+            <img src="images/image1.png" alt="Image 1" loading="lazy">
+        </div>
+        <div class="image" onclick="openLightbox(1)">
+            <img src="images/image2.png" alt="Image 2" loading="lazy">
+        </div>
+        <div class="image" onclick="openLightbox(2)">
+            <img src="images/image3.png" alt="Image 3" loading="lazy">
+        </div>
+        <div class="image" onclick="openLightbox(3)">
+            <img src="images/image4.png" alt="Image 4" loading="lazy">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" src="" alt="Expanded Image">
+        <div class="controls">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
